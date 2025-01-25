@@ -31,9 +31,25 @@ The expected output should be:
     "addUser": {
       "user": {
         "id": 1,
-        "name": "Alice",
-        "email": "alice@example.com"
+        "name": "User",
+        "email": "user@example.com"
       }
+    }
+  }
+}
+
+Ex:- Fetching user by id
+{
+  "query": "{ userById(id: 1) { id name email } }"
+}
+
+The expected output should be:
+{
+  "data": {
+    "userById": {
+      "id": 1,
+      "name": "User",
+      "email": "user@example.com"
     }
   }
 }
