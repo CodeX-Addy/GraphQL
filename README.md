@@ -15,3 +15,27 @@ The expected output should be:
     "allUsers": []
   }
 }
+
+Ex:- Adding a User (Mutation)
+{
+  "query": "mutation($name: String!, $email: String!) { addUser(name: $name, email: $email) { user { id name email } } }",
+  "variables": {
+    "name": "User",
+    "email": "user@example.com"
+  }
+}
+
+The expected output should be:
+{
+  "data": {
+    "addUser": {
+      "user": {
+        "id": 1,
+        "name": "Alice",
+        "email": "alice@example.com"
+      }
+    }
+  }
+}
+
+
