@@ -26,3 +26,30 @@ The expected output should be:
   }
 }
 ```
+
+#### **Example**
+Adding a User (Mutation)
+```json
+{
+  "query": "mutation($name: String!, $email: String!) { addUser(name: $name, email: $email) { user { id name email } } }",
+  "variables": {
+    "name": "User",
+    "email": "user@example.com"
+  }
+}
+```
+Expected Output should be:
+```json
+{
+  "data": {
+    "addUser": {
+      "user": {
+        "id": 1,
+        "name": "User",
+        "email": "user@example.com"
+      }
+    }
+  }
+}
+```
+
