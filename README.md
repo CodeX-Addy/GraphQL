@@ -1,57 +1,19 @@
-Directions to use:
+# GraphQL API Documentation
 
-The API will be available at http://127.0.0.1:5000/graphql
+## **API Endpoint**
+The API will be available at:  
+`http://127.0.0.1:5000/graphql`
 
-You can use this with postman or curl 
+You can use this endpoint with tools like **Postman** or **cURL** to perform GraphQL queries and mutations.
 
-Ex:- Fetching all the users (Request Body)
+---
+
+## **Examples**
+
+### **1. Fetching All Users**
+
+#### **Request Body**
+```json
 {
   "query": "{ allUsers { id name email } }"
 }
-
-The expected output should be:
-{
-  "data": {
-    "allUsers": []
-  }
-}
-
-Ex:- Adding a User (Mutation)
-{
-  "query": "mutation($name: String!, $email: String!) { addUser(name: $name, email: $email) { user { id name email } } }",
-  "variables": {
-    "name": "User",
-    "email": "user@example.com"
-  }
-}
-
-The expected output should be:
-{
-  "data": {
-    "addUser": {
-      "user": {
-        "id": 1,
-        "name": "User",
-        "email": "user@example.com"
-      }
-    }
-  }
-}
-
-Ex:- Fetching user by id
-{
-  "query": "{ userById(id: 1) { id name email } }"
-}
-
-The expected output should be:
-{
-  "data": {
-    "userById": {
-      "id": 1,
-      "name": "User",
-      "email": "user@example.com"
-    }
-  }
-}
-
-
