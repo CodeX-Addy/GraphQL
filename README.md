@@ -52,4 +52,22 @@ Expected Output should be:
   }
 }
 ```
+Fetching user by id:
+```json
+{
+  "query": "{ userById(id: 1) { id name email } }"
+}
+```
+Expected output should be:
+```json
+{
+  "data": {
+    "userById": {
+      "id": 1,
+      "name": "User",
+      "email": "user@example.com"
+    }
+  }
+}
+```
 
