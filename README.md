@@ -1,4 +1,4 @@
-# GraphQL API Documentation
+# GraphQL API 
 
 ## **API Endpoint**
 The API will be available at:  
@@ -17,3 +17,12 @@ You can use this endpoint with tools like **Postman** or **cURL** to perform Gra
 {
   "query": "{ allUsers { id name email } }"
 }
+```
+The expected output should be:
+```json
+{
+  "data": {
+    "allUsers": []
+  }
+}
+```
