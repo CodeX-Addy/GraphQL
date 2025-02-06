@@ -27,7 +27,7 @@ The expected output should be:
 }
 ```
 
-#### **Example**
+### **Further Examples**
 Adding a User (Mutation)
 ```json
 {
