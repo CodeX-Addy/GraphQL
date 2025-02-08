@@ -4,6 +4,7 @@ from graphene import ObjectType, String, Int, Field, List, Mutation, Schema
 ## In-memory data storage
 users = []
 
+## Type class
 class UserType(ObjectType):
     id = Int()
     name = String()
